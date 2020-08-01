@@ -1,3 +1,4 @@
+# Instructions
 
 This project was made using a text editor and the terminal, please first set the 3 jar file path locally using:
 
@@ -28,12 +29,9 @@ The program starts by asking the user to enter the path for three files:
 3. chess template xml file:
 	[your director]Maldonado_Nichole_Lab5/utep/cs3331/lab5/files/chessTemplate.xml
 
-
 Please include the above paths to allow the program to run and have access to its resources.
 
-
-
-Testing:
+# Testing
 
 The main test is located in [your directory]/Maldonado_Nichole_Lab5/utep/cs3331/tests/TestSuiteRunner.class
 
@@ -45,9 +43,7 @@ All tests will be run. The tests are subdivided into suites that run the corresp
 
 All code is located in src. The main code is located in src/maincode. The tests are located in src/tests. These tests are made with Junit 4. I also made the tests in Junit 5, however this code is just strictly for reference since I created a test suite to run all the test code.
 
-
-
-NOTES for Main Program:
+# Notes for Main Program
 
 After typing the file paths, the program allows the user to select if they are a new or existing user. If you are an existing user, you have the capability to load one of three of your most recent game (all of your older games, however, are still stored) or create a new game.
 
