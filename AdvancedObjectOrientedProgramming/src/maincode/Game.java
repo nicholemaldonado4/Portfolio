@@ -101,12 +101,10 @@ public class Game implements MinimumBoardDimensions {
         
         // Continues to play as long as user wants to.
         while (!quitPlaying) {
-            
-            
+           
             // Gets chess piece initial positions.
             char xPosition = this.gameView.retrieveXPosition(input, this.gameModel.getBoard().getNumColumns(), true);
             int yPosition = this.gameView.retrieveYPosition(input, this.gameModel.getBoard().getNumRows());
-            
             
             int xPositionValue = Integer.parseInt(String.valueOf(xPosition - MinimumBoardDimensions.MIN_X_POSITION));
                                               
@@ -121,12 +119,12 @@ public class Game implements MinimumBoardDimensions {
                 
                 // Verifies chess position.
                 try {
+                    String oldChessName = this.gameModel.getBoard().getChessBoard()[yPosition-1][xPositionValue].getName();
                     String moveNotifier = gameModel.verifyAndInitiateMove(xPositionValue, 
                             yPosition - 1, newXPosition, newYPosition);
                     
                     // Print result of move.
-                    this.gameView.printPiecePosition(moveNotifier, 
-                            this.gameModel.getBoard().getChessBoard()[yPosition-1][xPositionValue].getName(), newXPosition, newYPosition);
+                    this.gameView.printPiecePosition(moveNotifier, oldChessName, newXPosition, newYPosition);
                 }
                 catch (NullPointerException e) {
                     this.gameView.printErrorResolution(ActionRecovery.PIECE_DNE);
